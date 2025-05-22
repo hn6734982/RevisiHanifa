@@ -1,0 +1,106 @@
+.fade-edge {
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/**/
+@keyframes fadeSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeSlideUp 1s ease-out forwards;
+}
+
+.fade-in-left {
+    animation: fadeSlideLeft 1s ease-out forwards;
+}
+
+.fade-in-right {
+    animation: fadeSlideRight 1s ease-out forwards;
+}
+.from{
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.to{
+    opacity: 1;
+    transform: translateY(0);
+}
+.header{
+    animation: fadeln 1s ease-out;
+}
+.logo-hover:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-animate {
+  animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.nav-link {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #1f2937; /* hover text-gray-900 */
+  transform: translateY(-3px);
+}
+/*skill*/
+@keyframes progressBounce {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: calc(var(--target-width) + 5%); /* Bounce naik */
+  }
+  100% {
+    width: var(--target-width); /* Akhir di target */
+  }
+}
+
+.progress-bar {
+  --target-width: 85%;
+  animation: progressBounce 2s ease-in-out forwards;
+  background-color: blue;
+  height: 100%;
+}

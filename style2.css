@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+.font-effect{
+  font-family: "DM Serif Display", serif  /*font judul*/
+}
+body{
+    margin: 0;
+    background: linear-gradient(to left, #0c2a43, #80a5c1);
+}
+/*bagian header*/
+.from{
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.to{
+    opacity: 1;
+    transform: translateY(0);
+}
+.header{
+    animation: fadeln 1s ease-out;
+}
+.logo-hover:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+.btn-animate:hover{
+    transform: scale(1.05);
+    background-color: #4f46e5;
+    transition: transform 0.3s, background-color 0.3s;
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-animate {
+  animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.nav-link {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #07172d; 
+  transform: translateY(-3px);
+}
+/*bagian judul*/
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: black }
+}
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid black;
+  animation: typing 5s steps(50, end) 5s infinite, blink 5s step-end infinite;
+} 
+
+/*bagian home*/
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+.animate-slide-in {
+  animation: slideIn 1s ease-out forwards;
+}
+.btn-animate {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.btn-animate:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+/*bagian about me*/
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* Gambar animasi */
+.animate-slide-in-up {
+  animation: slideInUp 1s ease-out forwards;
+}
+.animate-fade-in-delay {
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+/* hover animasi */
+.button-animate {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.button-animate:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+/*bagian portofolio*/
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.portfolio-card {
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+}
+.portfolio-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.portfolio-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.portfolio-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.portfolio-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+@keyframes rainbowGlow {
+  0% { box-shadow: 0 0 15px #ff4d4d; border-color: #ff4d4d; }
+  25% { box-shadow: 0 0 15px #ffa64d; border-color: #ffa64d; }
+  50% { box-shadow: 0 0 15px #4dff88; border-color: #4dff88; }
+  75% { box-shadow: 0 0 15px #4da6ff; border-color: #4da6ff; }
+  100% { box-shadow: 0 0 15px #ff4dd2; border-color: #ff4dd2; }
+}
+.portfolio-card.glow {
+  border: 2px solid transparent;
+  border-radius: 16px;
+  animation: rainbowGlow 3s linear infinite;
+}
+.glow:hover {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.4), 0 0 30px rgba(139, 92, 246, 0.3), 0 0 40px rgba(191, 97, 255, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  @keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-slide-in {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlideIn 0.8s ease-out forwards;
+}
+
+/* Delay Classes for stagger effect */
+.delay-0 { animation-delay: 0s; }
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Optional Glow Effect */
+.glow:hover {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4), 0 0 30px rgba(139, 92, 246, 0.3), 0 0 40px rgba(191, 97, 255, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+/*bagian contact*/
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeSlideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.fade-in-up {
+    animation: fadeSlideUp 1s ease-out forwards;
+}
+.fade-in-left {
+    animation: fadeSlideLeft 1s ease-out forwards;
+}
+.fade-in-right {
+    animation: fadeSlideRight 1s ease-out forwards;
+}
